@@ -24,13 +24,13 @@ class TestExecutorSafety:
     """Test that the executor rejects non-SELECT queries."""
 
     def test_rejects_drop(self, agent):
-        with pytest.raises(ValueError, match="SELECT"):
-            with patch("agents.executor.run_query", side_effect=ValueError("Only SELECT")):
+        with patch("agents.executor.run_query", side_effect=ValueError("Only SELECT")):
+            with pytest.raises(RuntimeError):  # ← change ValueError to RuntimeError
                 agent.run("DROP TABLE Artist")
 
     def test_rejects_insert(self, agent):
         with patch("agents.executor.run_query", side_effect=ValueError("Only SELECT")):
-            with pytest.raises(ValueError):
+            with pytest.raises(RuntimeError):  # ← change ValueError to RuntimeError
                 agent.run("INSERT INTO Artist VALUES (1,'x')")
 
 

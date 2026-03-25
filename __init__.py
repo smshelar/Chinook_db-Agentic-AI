@@ -1,9 +1,0 @@
-ls
-app.py
-agents/
-utils/
-tests/
-chinook.db       
-requirements.txt
-.env.example
-venv/
