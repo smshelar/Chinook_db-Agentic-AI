@@ -1,4 +1,3 @@
-cat > download_db.py << 'EOF'
 import urllib.request
 import os
 
@@ -11,5 +10,4 @@ else:
     print("Downloading chinook.db...")
     urllib.request.urlretrieve(url, dest)
     print("Done! chinook.db is ready.")
-EOF
 

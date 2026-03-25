@@ -11,6 +11,10 @@ import sys
 import os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+# Auto-download database if missing
+if not os.path.exists("chinook.db"):
+    exec(open("download_db.py").read())
+
 import streamlit as st
 from agents.orchestrator import OrchestratorAgent
 
