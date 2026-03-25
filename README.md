@@ -114,6 +114,6 @@ Recommended VS Code extensions:
 
 - "Show me the top 5 selling artists"
 - "Which genre has the most tracks?"
-- "What were total sales by country in 2011?"
+- "What were total sales by country in 2022?"
 - "List all albums by AC/DC"
-- "Show monthly revenue for 2009"
+- "Show monthly revenue for 2023"
